@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-feature-settings: "tnum" 1;
+}
+
+body {
+  @apply bg-paper-100 text-ink-900 antialiased;
+}
+
+::selection {
+  @apply bg-forest-200 text-forest-900;
+}
+
+.mono-figure {
+  font-variant-numeric: tabular-nums;
+}
+
+@layer components {
+  .input {
+    @apply mt-1 w-full rounded-md border border-ink-200 px-3 py-2 text-sm focus:border-forest-400 focus:outline-none focus:ring-1 focus:ring-forest-400;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* Thin scrollbar for the sidebar and dense tables */
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: theme("colors.ink.200");
+  border-radius: 4px;
+}

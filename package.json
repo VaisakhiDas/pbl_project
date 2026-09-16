@@ -1,0 +1,19 @@
+{
+  "name": "gridswap-contracts",
+  "version": "1.0.0",
+  "description": "GridSwap smart contracts and Hardhat dev environment",
+  "scripts": {
+    "compile": "node scripts/compile-local.js",
+    "test": "npm run compile && hardhat test --no-compile",
+    "node": "hardhat node",
+    "deploy:localhost": "npm run compile && hardhat run scripts/deploy.js --network localhost --no-compile"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "solc": "^0.8.24"
+  }
+}
